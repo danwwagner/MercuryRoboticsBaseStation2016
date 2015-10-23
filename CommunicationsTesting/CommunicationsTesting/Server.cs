@@ -63,17 +63,5 @@ namespace CommunicationsTesting
          //   listener.Stop();
          //   Console.WriteLine("Server dead.");
         }
-
-        public string ByteToString(byte[] data)
-        {
-            StringBuilder sb = new StringBuilder();
-            foreach (byte b in data)
-            {
-                sb.Append(b);
-            }
-
-            return sb.ToString();
-        }
-
     }
 }

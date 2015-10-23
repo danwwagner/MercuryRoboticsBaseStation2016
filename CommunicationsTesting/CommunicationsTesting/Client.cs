@@ -35,7 +35,18 @@ namespace CommunicationsTesting
                 string response = Console.ReadLine();
                 byte[] data = ASCIIEncoding.ASCII.GetBytes(response + "\n");
                 if (response == "quit") return;
-                else client.Send(data, data.Length);
+                else
+                {
+                    for (int i = 0; i <= 100; i++)
+                    {
+                        data = ASCIIEncoding.ASCII.GetBytes(response + i + "\n");
+                        client.Send(data, data.Length);
+                    }
+
+                    data = ASCIIEncoding.ASCII.GetBytes("last" + "\n");
+                    client.Send(data, data.Length);
+                }
+
 
                 //byte[] b = client.Receive(ref end);
                // Console.WriteLine("Recieved data from Client:  " + ByteToString(b) + "\n");

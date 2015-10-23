@@ -205,7 +205,7 @@ namespace BaseStation
             verticalProgressBarLeftMotor.Value = (int)Math.Floor(left * 50) + 50;
             verticalProgressBarRightMotor.Value = (int)Math.Floor(right * 50) + 50;
             verticalProgressBarArmerature.Value = (int)arm;
-            verticalProgressBarIris.Value = (int)iris;
+           
             if (led.ToString().Equals("1")) HeadLightsState.Text = "ON";
             else HeadLightsState.Text = "OFF";
 

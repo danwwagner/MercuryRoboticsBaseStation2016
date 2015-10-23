@@ -41,16 +41,11 @@
             this.MaxDegreeArm = new System.Windows.Forms.Label();
             this.NinetyDegreeArm = new System.Windows.Forms.Label();
             this.ZeroDegreeArm = new System.Windows.Forms.Label();
-            this.MaxDegreeIris = new System.Windows.Forms.Label();
-            this.NinetyDegreeIris = new System.Windows.Forms.Label();
-            this.ZeroDegreeIris = new System.Windows.Forms.Label();
             this.Armerature = new System.Windows.Forms.Label();
-            this.Iris = new System.Windows.Forms.Label();
             this.LeftMotorNameLabel = new System.Windows.Forms.Label();
             this.RightMotorNameLabel = new System.Windows.Forms.Label();
             this.leftMotorLabel = new System.Windows.Forms.Label();
             this.rightMotorLabel = new System.Windows.Forms.Label();
-            this.verticalProgressBarIris = new BaseStation.VerticalProgressBar();
             this.verticalProgressBarArmerature = new BaseStation.VerticalProgressBar();
             this.verticalProgressBarRightMotor = new BaseStation.VerticalProgressBar();
             this.verticalProgressBarLeftMotor = new BaseStation.VerticalProgressBar();
@@ -145,7 +140,7 @@
             // MaxDegreeArm
             // 
             this.MaxDegreeArm.AutoSize = true;
-            this.MaxDegreeArm.Location = new System.Drawing.Point(203, 47);
+            this.MaxDegreeArm.Location = new System.Drawing.Point(282, 47);
             this.MaxDegreeArm.Name = "MaxDegreeArm";
             this.MaxDegreeArm.Size = new System.Drawing.Size(29, 13);
             this.MaxDegreeArm.TabIndex = 14;
@@ -154,7 +149,7 @@
             // NinetyDegreeArm
             // 
             this.NinetyDegreeArm.AutoSize = true;
-            this.NinetyDegreeArm.Location = new System.Drawing.Point(203, 177);
+            this.NinetyDegreeArm.Location = new System.Drawing.Point(282, 177);
             this.NinetyDegreeArm.Name = "NinetyDegreeArm";
             this.NinetyDegreeArm.Size = new System.Drawing.Size(23, 13);
             this.NinetyDegreeArm.TabIndex = 15;
@@ -163,56 +158,20 @@
             // ZeroDegreeArm
             // 
             this.ZeroDegreeArm.AutoSize = true;
-            this.ZeroDegreeArm.Location = new System.Drawing.Point(203, 319);
+            this.ZeroDegreeArm.Location = new System.Drawing.Point(282, 319);
             this.ZeroDegreeArm.Name = "ZeroDegreeArm";
             this.ZeroDegreeArm.Size = new System.Drawing.Size(17, 13);
             this.ZeroDegreeArm.TabIndex = 16;
             this.ZeroDegreeArm.Text = "0°";
             // 
-            // MaxDegreeIris
-            // 
-            this.MaxDegreeIris.AutoSize = true;
-            this.MaxDegreeIris.Location = new System.Drawing.Point(283, 47);
-            this.MaxDegreeIris.Name = "MaxDegreeIris";
-            this.MaxDegreeIris.Size = new System.Drawing.Size(29, 13);
-            this.MaxDegreeIris.TabIndex = 17;
-            this.MaxDegreeIris.Text = "360°";
-            // 
-            // NinetyDegreeIris
-            // 
-            this.NinetyDegreeIris.AutoSize = true;
-            this.NinetyDegreeIris.Location = new System.Drawing.Point(283, 177);
-            this.NinetyDegreeIris.Name = "NinetyDegreeIris";
-            this.NinetyDegreeIris.Size = new System.Drawing.Size(29, 13);
-            this.NinetyDegreeIris.TabIndex = 18;
-            this.NinetyDegreeIris.Text = "180°";
-            // 
-            // ZeroDegreeIris
-            // 
-            this.ZeroDegreeIris.AutoSize = true;
-            this.ZeroDegreeIris.Location = new System.Drawing.Point(283, 319);
-            this.ZeroDegreeIris.Name = "ZeroDegreeIris";
-            this.ZeroDegreeIris.Size = new System.Drawing.Size(17, 13);
-            this.ZeroDegreeIris.TabIndex = 19;
-            this.ZeroDegreeIris.Text = "0°";
-            // 
             // Armerature
             // 
             this.Armerature.AutoSize = true;
-            this.Armerature.Location = new System.Drawing.Point(155, 31);
+            this.Armerature.Location = new System.Drawing.Point(234, 31);
             this.Armerature.Name = "Armerature";
             this.Armerature.Size = new System.Drawing.Size(58, 13);
             this.Armerature.TabIndex = 20;
             this.Armerature.Text = "Armerature";
-            // 
-            // Iris
-            // 
-            this.Iris.AutoSize = true;
-            this.Iris.Location = new System.Drawing.Point(254, 31);
-            this.Iris.Name = "Iris";
-            this.Iris.Size = new System.Drawing.Size(20, 13);
-            this.Iris.TabIndex = 21;
-            this.Iris.Text = "Iris";
             // 
             // LeftMotorNameLabel
             // 
@@ -226,7 +185,7 @@
             // RightMotorNameLabel
             // 
             this.RightMotorNameLabel.AutoSize = true;
-            this.RightMotorNameLabel.Location = new System.Drawing.Point(81, 31);
+            this.RightMotorNameLabel.Location = new System.Drawing.Point(133, 31);
             this.RightMotorNameLabel.Name = "RightMotorNameLabel";
             this.RightMotorNameLabel.Size = new System.Drawing.Size(62, 13);
             this.RightMotorNameLabel.TabIndex = 23;
@@ -248,17 +207,9 @@
             this.rightMotorLabel.Size = new System.Drawing.Size(0, 13);
             this.rightMotorLabel.TabIndex = 25;
             // 
-            // verticalProgressBarIris
-            // 
-            this.verticalProgressBarIris.Location = new System.Drawing.Point(243, 47);
-            this.verticalProgressBarIris.Maximum = 180;
-            this.verticalProgressBarIris.Name = "verticalProgressBarIris";
-            this.verticalProgressBarIris.Size = new System.Drawing.Size(39, 285);
-            this.verticalProgressBarIris.TabIndex = 13;
-            // 
             // verticalProgressBarArmerature
             // 
-            this.verticalProgressBarArmerature.Location = new System.Drawing.Point(158, 47);
+            this.verticalProgressBarArmerature.Location = new System.Drawing.Point(237, 47);
             this.verticalProgressBarArmerature.Maximum = 180;
             this.verticalProgressBarArmerature.Name = "verticalProgressBarArmerature";
             this.verticalProgressBarArmerature.Size = new System.Drawing.Size(39, 285);
@@ -266,7 +217,7 @@
             // 
             // verticalProgressBarRightMotor
             // 
-            this.verticalProgressBarRightMotor.Location = new System.Drawing.Point(84, 47);
+            this.verticalProgressBarRightMotor.Location = new System.Drawing.Point(136, 47);
             this.verticalProgressBarRightMotor.Name = "verticalProgressBarRightMotor";
             this.verticalProgressBarRightMotor.Size = new System.Drawing.Size(39, 285);
             this.verticalProgressBarRightMotor.TabIndex = 11;
@@ -287,15 +238,10 @@
             this.Controls.Add(this.leftMotorLabel);
             this.Controls.Add(this.RightMotorNameLabel);
             this.Controls.Add(this.LeftMotorNameLabel);
-            this.Controls.Add(this.Iris);
             this.Controls.Add(this.Armerature);
-            this.Controls.Add(this.ZeroDegreeIris);
-            this.Controls.Add(this.NinetyDegreeIris);
-            this.Controls.Add(this.MaxDegreeIris);
             this.Controls.Add(this.ZeroDegreeArm);
             this.Controls.Add(this.NinetyDegreeArm);
             this.Controls.Add(this.MaxDegreeArm);
-            this.Controls.Add(this.verticalProgressBarIris);
             this.Controls.Add(this.verticalProgressBarArmerature);
             this.Controls.Add(this.verticalProgressBarRightMotor);
             this.Controls.Add(this.verticalProgressBarLeftMotor);
@@ -335,15 +281,10 @@
         private VerticalProgressBar verticalProgressBarLeftMotor;
         private VerticalProgressBar verticalProgressBarRightMotor;
         private VerticalProgressBar verticalProgressBarArmerature;
-        private VerticalProgressBar verticalProgressBarIris;
         private System.Windows.Forms.Label MaxDegreeArm;
         private System.Windows.Forms.Label NinetyDegreeArm;
         private System.Windows.Forms.Label ZeroDegreeArm;
-        private System.Windows.Forms.Label MaxDegreeIris;
-        private System.Windows.Forms.Label NinetyDegreeIris;
-        private System.Windows.Forms.Label ZeroDegreeIris;
         private System.Windows.Forms.Label Armerature;
-        private System.Windows.Forms.Label Iris;
         private System.Windows.Forms.Label LeftMotorNameLabel;
         private System.Windows.Forms.Label RightMotorNameLabel;
         private System.Windows.Forms.Label leftMotorLabel;
