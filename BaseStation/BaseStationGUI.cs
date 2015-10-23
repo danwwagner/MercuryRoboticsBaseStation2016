@@ -55,11 +55,11 @@ namespace BaseStation
         public BaseStationGUI()
         {
             InitializeComponent();
-      //      IPModeWindow ipMode = new IPModeWindow();
+            IPModeWindow ipMode = new IPModeWindow();
             robotConnection = new UdpClient(4444);
             
            
-    /*        if (ipMode.ShowDialog() != DialogResult.OK) System.Environment.Exit(0);
+           if (ipMode.ShowDialog() != DialogResult.OK) System.Environment.Exit(0);
             else
             {
                 if (ipMode.check == 1)
@@ -88,13 +88,13 @@ namespace BaseStation
             byte[] buff = Encoding.ASCII.GetBytes(baseip);
             robotConnection.Send(buff, buff.Length);
             sensorData = new SensorData(robotIP);
-            sensorData.SensorUpdate += SensorData_SensorDataUpdate; */
+            sensorData.SensorUpdate += SensorData_SensorDataUpdate;
             commands = new KeyCommand();
             xboxController = new GamepadState(SlimDX.XInput.UserIndex.One);
             xboxController.ControllerUpdate += xboxController_ControllerUpdate;
             xcontroller = new MotorControl();
             kcontroller = new MotorControl();
-          /*  ffplay = new Process();
+        /*    ffplay = new Process();
             ffplay.StartInfo.Arguments = "http://192.168.2.29:8090/live.mpg";
             ffplay.StartInfo.FileName = "ffplay.exe";
             ffplay.Start(); */
@@ -169,7 +169,7 @@ namespace BaseStation
         {
             kcontroller.Update(commands);
 
-        //    SendMotorControllerPacket(kcontroller);
+            SendMotorControllerPacket(kcontroller);
 
             UpdateGui(kcontroller.LeftDriveThrottle, kcontroller.RightDriveThrottle, kcontroller.armAngle, kcontroller.irisAngle, kcontroller.Led_State);
         }
@@ -181,7 +181,7 @@ namespace BaseStation
         private void SendMotorControllerPacket(MotorControl controller)
         {
             byte[] dataBuffer = controller.ToArray();
-        //    robotConnection.Send(dataBuffer, dataBuffer.Length);
+            robotConnection.Send(dataBuffer, dataBuffer.Length);
         }
 
         delegate void threadSafeGuiUpdate(double left, double right, double arm, double iris, byte led);

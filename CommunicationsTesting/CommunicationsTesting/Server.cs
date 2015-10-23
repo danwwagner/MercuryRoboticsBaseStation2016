@@ -14,21 +14,24 @@ namespace CommunicationsTesting
     class Server
     {
 
-        const int PORT_NO = 5000;
-        const string SERVER_IP = "127.0.0.1";
+        const int PORT_NO = 4445;
+        const string SERVER_IP = "25.6.177.110";
 
         public void StartServer()
         {
             //---listen at the specified IP and port no.---
-            IPAddress localAdd = IPAddress.Parse(SERVER_IP);
+      /*      IPAddress localAdd = IPAddress.Parse(SERVER_IP);
             TcpListener listener = new TcpListener(localAdd, PORT_NO);
             listener.Start();
 
             //---incoming client connected---
-            TcpClient client = listener.AcceptTcpClient();
+            TcpClient client = listener.AcceptTcpClient(); */
 
+            // UDP Testing
+            UdpClient server = new UdpClient(SERVER_IP, PORT_NO);
             while (true)
             {
+                /*
                 Console.Write("Server listening...Type your message: ");
                 listener.Start();
 
@@ -46,14 +49,31 @@ namespace CommunicationsTesting
 
                 //---write back the text to the client---
                 //  Console.WriteLine("Server sending back : " + dataReceived);
-                nwStream.Write(buffer, 0, bytesRead);
+                nwStream.Write(buffer, 0, bytesRead); */
+
+                var remoteEP = new IPEndPoint(IPAddress.Any, PORT_NO);
+                var data = server.Receive(ref remoteEP);
+                Console.WriteLine("Receive data from Server:  " + data.ToString());
+              //  server.Send(new byte[] { 1 }, 1, remoteEP);
+              //  int i = 0;
+             //   while (++i < 50000000) ;
 
             }
-            client.Close();
-            listener.Stop();
-            Console.WriteLine("Server dead.");
+        //    client.Close();
+         //   listener.Stop();
+         //   Console.WriteLine("Server dead.");
         }
 
-        
+        public string ByteToString(byte[] data)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (byte b in data)
+            {
+                sb.Append(b);
+            }
+
+            return sb.ToString();
+        }
+
     }
 }

@@ -17,8 +17,8 @@ namespace CommunicationsTesting
 
         static void Main(string[] args)
         {   
-            Thread serverThread = new Thread(ServThread);
-            serverThread.Start();
+          //  Thread serverThread = new Thread(ServThread);
+        //    serverThread.Start();
             Thread clientThread = new Thread(CliThread);
             clientThread.Start();
         }
