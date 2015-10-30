@@ -21,7 +21,7 @@ namespace CommunicationsTesting
         {
            // Packet P = new Packet();
             const int PORT_NO = 4444;
-            const string SERVER_IP = "25.14.182.86";
+            const string SERVER_IP = "25.5.87.237";
             // TcpClient client = new TcpClient(SERVER_IP, PORT_NO);
             UdpClient client = new UdpClient(SERVER_IP, PORT_NO);
             IPEndPoint end = new IPEndPoint(IPAddress.Parse(SERVER_IP), PORT_NO);
@@ -43,14 +43,7 @@ namespace CommunicationsTesting
                 byte[] data = ASCIIEncoding.ASCII.GetBytes(response + "\n");
                 if (response == "quit") return;
                 else
-                {
-                    for (int i = 0; i <= 100; i++)
-                    {
-                        data = ASCIIEncoding.ASCII.GetBytes(response + i + "\n");
-                        client.Send(data, data.Length);
-                    }
-
-                    data = ASCIIEncoding.ASCII.GetBytes("last" + "\n");
+                { 
                     client.Send(data, data.Length);
                 }
 
