@@ -9,10 +9,17 @@ using System.Net.Sockets;
 /* Courtesy of http://stackoverflow.com/questions/10182751/server-client-send-receive-simple-text */
 namespace CommunicationsTesting
 {
+    /// <summary>
+    /// Client communications class
+    /// </summary>
     class Client
     {
+        /// <summary>
+        /// Starts a client through UDP, connects to the Raspberry Pi, and transmits input to it.
+        /// </summary>
         public void StartClient()
         {
+           // Packet P = new Packet();
             const int PORT_NO = 4444;
             const string SERVER_IP = "25.14.182.86";
             // TcpClient client = new TcpClient(SERVER_IP, PORT_NO);
